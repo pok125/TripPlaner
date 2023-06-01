@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TripPlaner</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="/chatgpt.js"></script>
   </head>
   <body>
     <div
@@ -32,6 +33,7 @@
                 >나라:</label
               >
               <input
+                id="input-contry"
                 class="w-1/2 text-center bg-white shadow rounded-lg text-sm font-semibold"
                 type="text"
               />
@@ -43,6 +45,7 @@
                 >도시:</label
               >
               <input
+                id="input-city"
                 class="w-1/2 text-center bg-white shadow rounded-lg text-sm font-semibold"
                 type="text"
               />
@@ -57,6 +60,7 @@
                 >여행일정:</label
               >
               <input
+                id="input-schedule"
                 class="w-1/2 text-center bg-white shadow rounded-lg text-sm font-semibold"
                 type="text"
               />
@@ -68,6 +72,7 @@
                 >꼭 가고싶은 장소:</label
               >
               <input
+                id="input-include"
                 class="w-2/3 text-center bg-white shadow rounded-lg text-sm font-semibold"
                 type="text"
               />
@@ -97,6 +102,7 @@
           <div class="flex-1"></div>
           <div class="flex justify-center w-full h-6">
             <button
+              id="save-btn"
               class="w-1/2 h-full transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded font-semibold text-white"
             >
               저장
@@ -105,13 +111,16 @@
         </div>
       </div>
       <!-- 일정 -->
-      <div class="flex gap-5 w-auto h-1/3">
-        <div class="m-3 w-64">
-          <p>day1 sdfsfsdfs dfsdfsdf sdfsfsdfssdfsd fsd fsdf sdfsfsdfs</p>
-        </div>
-        <div class="m-3 w-64">
-          <p>day2</p>
-        </div>
+      <div id="result-div" class="flex gap-5 w-auto h-1/3">
+        <!-- <div class="w-64 text-xs border-2 border-gray-900">
+          Day 1:<br />
+          - 광화문 광장: 첫날 오전에는 광화문 광장에서 대한민국 역사와 문화를
+          배울 수 있는 국립중앙박물관을 방문해보세요.<br />
+          - 경복궁: 이어서 국보로 지정된 경복궁에서 조선시대의 멋과 정조시대의
+          정교함을 느껴보세요. <br />
+          - 남산타워: 저녁에는 남산타워에서 멋진 야경을 감상하며 하루를
+          마무리하세요.
+        </div> -->
       </div>
       <div class="flex-1"></div>
       <!-- footer -->
