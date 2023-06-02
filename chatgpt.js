@@ -1,3 +1,10 @@
+// 임시 테스트용
+import { mapdata } from "./mapdata.js";
+
+document.querySelector("#map").innerHTML = mapdata;
+
+// const datas = document.querySelectorAll("path");
+/////////////////
 const $save_btn = document.querySelector("#save-btn");
 
 // openAI API
