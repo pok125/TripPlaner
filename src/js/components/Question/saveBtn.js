@@ -1,5 +1,6 @@
 import { questionData, urlDatas } from "../../data/index.js";
 import { fetchAPI } from "../../utils/index.js";
+import { result } from "../Result/index.js";
 
 /**
  * click이벤트를 추가한 저장 버튼 생성 및 반환
@@ -61,7 +62,7 @@ function questionForm(infoObj) {
   const question = `나는 ${infoObj["contry"]}의 
     ${infoObj["city"]}로 여행을 갈거야. 인기 있는 관광지로
     ${infoObj["schedule"]} 일정을 짜줘.
-    일정 중에 ${infoObj["includes"]} 지역을 넣어줘.
+    일정 중에 ${infoObj["inclusion"]} 지역을 넣어줘.
     일정은 Day별로 나타내줘. 인사말은 빼줘`;
 
   return question;
@@ -81,10 +82,17 @@ function pushQuestion(question) {
 
 /**
  * 질문 데이터를 chatGPT api로 전송 후 데이터를 받음
+ * 받은 데이터를 결과 데이터에 저장
  *
  */
 async function sendData() {
-  const answer = await fetchAPI.apiPost(urlDatas.chatGPT, questionData.data);
+  try {
+    const answer = await fetchAPI.apiPost(urlDatas.chatGPT, questionData.data);
+    const message = answer.choices[0].message.content;
+    result.setResultData(message);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 export { render };

@@ -17,5 +17,7 @@ $root.append($mainHeader, $main, $mainFooter);
 const $sectionMap = map.render();
 // questionView
 const $sectionQuestion = question.render();
+// resultView
+const $sectionResult = result.render();
 
-$main.append($sectionMap, $sectionQuestion);
+$main.append($sectionMap, $sectionQuestion, $sectionResult);
