@@ -7,7 +7,7 @@ $mapContainer.setAttribute("id", "section-map");
 /**
  * section-map 초기화 후 mapData를 넣어 반환
  *
- * @return {Element} mapData가 들어간 section Elemnet
+ * @return {Element} 세팅된 section Element
  */
 function render() {
   $mapContainer.innerHTML = "";
