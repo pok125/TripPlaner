@@ -2,10 +2,10 @@ import { mapData } from "../../data/index.js";
 
 // map을 보여줄 section
 const $mapContainer = document.createElement("section");
-$mapContainer.setAttribute("id", "section-map");
+$mapContainer.setAttribute("id", "mapSection");
 
 /**
- * section-map 초기화 후 mapData를 넣어 반환
+ * mapSection 초기화 후 mapData를 넣어 반환
  *
  * @return {Element} 세팅된 section Element
  */
