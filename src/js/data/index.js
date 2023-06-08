@@ -1,5 +1,5 @@
-import * as mapData from "./mapData";
-import * as questionData from "./questionData";
-import * as urlDatas from "./urlDatas";
+import * as mapData from "./mapData.js";
+import * as questionData from "./questionData.js";
+import * as urlDatas from "./urlDatas.js";
 
 export { mapData, questionData, urlDatas };
