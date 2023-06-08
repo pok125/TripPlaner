@@ -1,4 +1,6 @@
-import { questionData } from "../../data/index.js";
+import { questionData, urlDatas } from "../../data/index.js";
+import { fetchAPI } from "../../utils/index.js";
+
 /**
  * click이벤트를 추가한 저장 버튼 생성 및 반환
  *
@@ -21,7 +23,7 @@ function render() {
  */
 function save(e) {
   // html의 기본동작 막기
-  e.preventDefalut();
+  e.preventDefault();
 
   const contry = document.querySelector("#inputContry").value;
   const city = document.querySelector("#inputCity").value;
@@ -43,6 +45,8 @@ function save(e) {
     const question = questionForm(inputDatas);
     // 질문 저장
     pushQuestion(question);
+    // 데이터 전송
+    sendData();
   }
 }
 
@@ -73,6 +77,14 @@ function pushQuestion(question) {
     role: "user",
     content: question
   });
+}
+
+/**
+ * 질문 데이터를 chatGPT api로 전송 후 데이터를 받음
+ *
+ */
+async function sendData() {
+  const answer = await fetchAPI.apiPost(urlDatas.chatGPT, questionData.data);
 }
 
 export { render };
