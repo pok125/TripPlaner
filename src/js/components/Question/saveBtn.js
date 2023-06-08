@@ -19,7 +19,10 @@ function render() {
  *
  * @return {object} 사용자가 입력한 JSON데이터
  */
-function save() {
+function save(e) {
+  // html의 기본동작 막기
+  e.preventDefalut();
+
   const contry = document.querySelector("#inputContry").value;
   const city = document.querySelector("#inputCity").value;
   const schedule = document.querySelector("#inputSchedule").value;
