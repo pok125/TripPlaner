@@ -5,13 +5,15 @@ const $mapContainer = document.createElement("section");
 $mapContainer.setAttribute("id", "mapSection");
 
 /**
- * mapSection 초기화 후 mapData를 넣어 반환
+ * map 화면 생성
  *
- * @return {Element} 세팅된 section Element
+ * @return {Element} section
  */
 function render() {
+  // 초기화
   $mapContainer.innerHTML = "";
   $mapContainer.innerHTML = mapData.mapdata;
+
   return $mapContainer;
 }
 

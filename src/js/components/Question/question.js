@@ -5,13 +5,15 @@ const $questionContainer = document.createElement("section");
 $questionContainer.setAttribute("id", "questionSection");
 
 /**
- * questionSection 초기화 후 입력받을 목록 Element들 추가
+ * question 화면 생성
  *
- * @return {Element} 세팅된 section Element
+ * @return {Element} section
  */
 function render() {
+  // 초기화
   $questionContainer.innerHTML = "";
-  //  나라 입력
+
+  // 나라 입력
   const $labelContry = document.createElement("label");
   $labelContry.innerText = "나라";
   $labelContry.setAttribute("for", "inputContry");
@@ -19,6 +21,7 @@ function render() {
   const $inputContry = document.createElement("input");
   $inputContry.type = "text";
   $inputContry.setAttribute("id", "inputContry");
+
   // 도시 입력
   const $labelCity = document.createElement("label");
   $labelCity.innerText = "도시";
@@ -27,6 +30,7 @@ function render() {
   const $inputCity = document.createElement("input");
   $inputCity.type = "text";
   $inputCity.setAttribute("id", "inputCity");
+
   // 일정 입력
   const $labelSchedule = document.createElement("label");
   $labelSchedule.innerText = "일정";
@@ -35,6 +39,7 @@ function render() {
   const $inputSchedule = document.createElement("input");
   $inputSchedule.type = "text";
   $inputSchedule.setAttribute("id", "inputSchedule");
+
   // 포함하고 싶은 장소 입력
   const $labelInclusion = document.createElement("label");
   $labelInclusion.innerText = "포함하고 싶은 장소";
@@ -58,6 +63,7 @@ function render() {
     $inputInclusion,
     $saveBtn
   );
+
   return $questionContainer;
 }
 

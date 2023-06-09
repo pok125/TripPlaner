@@ -1,6 +1,8 @@
 import { card } from "./index.js";
 
+// 결과 JSON 데이터
 let resultData = null;
+
 // 결과를 보여주는 section
 const $resultContainer = document.createElement("section");
 $resultContainer.setAttribute("id", "resultSection");
@@ -17,14 +19,16 @@ function setResultData(result) {
 }
 
 /**
- * resultSection 초기화 후 결과 화면 Element들 추가
+ * 결과 화면 생성
  *
- * @return {Element} 세팅된 section Element
+ * @return {Element} section
  */
 function render() {
+  // 초기화
   $resultContainer.innerHTML = "";
 
   if (resultData) {
+    // 일차별 결과 div생성
     for (const day in resultData) {
       const $resultItem = card.createCard(day, resultData[day]);
       $resultContainer.append($resultItem);

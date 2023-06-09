@@ -1,6 +1,6 @@
 /**
  * 요청할 url과 보낼 데이터를 입력받아 POST로 전송 후
- * 받은 데이터를 JSON으로 변환
+ * 받은 데이터를 JSON으로 변환 후 반환
  *
  * @param {string} 요청할 api URL주소
  * @param {string} 전송할 데이터
@@ -17,6 +17,7 @@ async function apiPost(url, data) {
       redirect: "follow"
     });
     const answer = await res.json();
+
     return answer;
   } catch (err) {
     console.log(err);

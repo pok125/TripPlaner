@@ -23,6 +23,7 @@ function createCard(day, contentDatas) {
   }
 
   $cardContainer.append($title, $content);
+
   return $cardContainer;
 }
 
