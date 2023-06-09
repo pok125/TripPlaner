@@ -1,4 +1,6 @@
-let resultData = "";
+import { card } from "./index.js";
+
+let resultData = null;
 // 결과를 보여주는 section
 const $resultContainer = document.createElement("section");
 $resultContainer.setAttribute("id", "resultSection");
@@ -10,7 +12,7 @@ $resultContainer.setAttribute("id", "resultSection");
  * @param {string} 요청에 대한 결과 데이터
  */
 function setResultData(result) {
-  resultData = result;
+  resultData = JSON.parse(result);
   render();
 }
 
@@ -20,16 +22,17 @@ function setResultData(result) {
  * @return {Element} 세팅된 section Element
  */
 function render() {
-  // 확인용
-  const $test = document.createElement("div");
   $resultContainer.innerHTML = "";
+
   if (resultData) {
-    $test.innerText = resultData;
+    for (const day in resultData) {
+      const $resultItem = card.createCard(day, resultData[day]);
+      $resultContainer.append($resultItem);
+    }
   } else {
-    $test.innerText = "보여드릴 일정이 없습니다.";
+    $resultContainer.innerText = "보여드릴 일정이 없습니다.";
   }
 
-  $resultContainer.append($test);
   return $resultContainer;
 }
 
