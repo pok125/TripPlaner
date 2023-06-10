@@ -1,0 +1,40 @@
+@import "./reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
+/* 전체 페이지 */
+#root {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* 페이지 배경 설정 */
+#root::before {
+  content: "";
+  background-image: url("../asset/img/root_bg.jpg");
+  background-size: cover;
+  position: absolute;
+  opacity: 0.7;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+/* 페이지 헤더 */
+#header {
+  position: relative;
+}
+
+/* 메인 컨텐츠 */
+#main {
+  position: relative;
+}
+
+/* 페이지 푸터 */
+#footer {
+  position: relative;
+}

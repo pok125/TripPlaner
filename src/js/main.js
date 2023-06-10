@@ -11,6 +11,10 @@ const $mainHeader = document.createElement("header");
 const $main = document.createElement("main");
 const $mainFooter = document.createElement("footer");
 
+$mainHeader.setAttribute("id", "header");
+$main.setAttribute("id", "main");
+$mainFooter.setAttribute("id", "footer");
+
 $root.append($mainHeader, $main, $mainFooter);
 
 // mapView
