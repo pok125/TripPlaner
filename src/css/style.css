@@ -120,8 +120,8 @@
   height: 50%;
 }
 
-/*  */
-.label-contry,
+/* label 설정 */
+.label-country,
 .label-city,
 .label-schedule,
 .label-inclusion {
@@ -133,12 +133,13 @@
   margin-right: 10px;
 }
 
-.label-contry,
+.label-country,
 .label-schedule {
   margin-left: 20px;
 }
 
-#inputContry,
+/* input 설정 */
+#inputCountry,
 #inputCity,
 #inputSchedule,
 #inputInclusion {
@@ -147,10 +148,13 @@
   border-radius: 4px;
   color: var(--font-color);
 }
-#inputContry,
+
+#inputCountry,
 #inputSchedule {
   margin-right: 100px;
 }
+
+/* 저장 버튼 */
 .btn-save {
   width: 80%;
   height: 80%;

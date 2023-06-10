@@ -28,18 +28,18 @@ function save(e) {
   // html의 기본동작 막기
   e.preventDefault();
 
-  const contry = document.querySelector("#inputContry").value;
+  const country = document.querySelector("#inputCountry").value;
   const city = document.querySelector("#inputCity").value;
   const schedule = document.querySelector("#inputSchedule").value;
   const inclusion = document.querySelector("#inputInclusion").value;
 
   // 빈칸 체크
-  if (!contry || !city || !schedule || !inclusion) {
+  if (!country || !city || !schedule || !inclusion) {
     alert("모든 정보가 입력되지 않았습니다.");
   } else {
     // 값들을 object로 저장
     const inputDatas = {
-      contry: contry,
+      country: country,
       city: city,
       schedule: schedule,
       inclusion: inclusion
@@ -63,7 +63,7 @@ function save(e) {
  * @return {string} 질문 형식에 맞게 데이터가 삽입된 데이터
  */
 function questionForm(infoObj) {
-  const question = `나는 ${infoObj["contry"]}의 
+  const question = `나는 ${infoObj["country"]}의 
     ${infoObj["city"]}로 여행을 갈거야. 인기 있는 관광지로
     ${infoObj["schedule"]} 일정을 짜줘.
     일정 중에 하루는 ${infoObj["inclusion"]}을(를) 포함시켜줘. 답변은 JSON형식으로 만 부탁해`;

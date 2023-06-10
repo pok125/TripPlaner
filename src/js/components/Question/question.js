@@ -24,14 +24,14 @@ function render() {
   $divSecondInput.classList.add("div-input-02");
 
   // 나라 입력
-  const $labelContry = document.createElement("label");
-  $labelContry.innerText = "나라";
-  $labelContry.setAttribute("for", "inputContry");
-  $labelContry.classList.add("label-contry");
+  const $labelCountry = document.createElement("label");
+  $labelCountry.innerText = "나라";
+  $labelCountry.setAttribute("for", "inputCountry");
+  $labelCountry.classList.add("label-country");
 
-  const $inputContry = document.createElement("input");
-  $inputContry.type = "text";
-  $inputContry.setAttribute("id", "inputContry");
+  const $inputCountry = document.createElement("input");
+  $inputCountry.type = "text";
+  $inputCountry.setAttribute("id", "inputCountry");
 
   // 도시 입력
   const $labelCity = document.createElement("label");
@@ -67,7 +67,7 @@ function render() {
   const $saveBtn = saveBtn.render();
 
   // 나라, 도시 입력
-  $divFirstInput.append($labelContry, $inputContry, $labelCity, $inputCity);
+  $divFirstInput.append($labelCountry, $inputCountry, $labelCity, $inputCity);
 
   // 일정, 포함할 장소 입력
   $divSecondInput.append(
