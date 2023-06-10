@@ -66,7 +66,7 @@ function questionForm(infoObj) {
   const question = `나는 ${infoObj["country"]}의 
     ${infoObj["city"]}로 여행을 갈거야. 인기 있는 관광지로
     ${infoObj["schedule"]} 일정을 짜줘.
-    일정 중에 하루는 ${infoObj["inclusion"]}을(를) 포함시켜줘. 답변은 JSON형식으로 만 부탁해`;
+    일정 중에 하루는 ${infoObj["inclusion"]}을(를) 포함시켜줘. 답변은 JSON형식으로 만 해줘`;
 
   return question;
 }

@@ -14,6 +14,7 @@ $resultContainer.setAttribute("id", "resultSection");
  * @param {string} 요청에 대한 결과 데이터
  */
 function setResultData(result) {
+  console.log(result);
   resultData = JSON.parse(result);
   render();
 }
@@ -28,10 +29,14 @@ function render() {
   $resultContainer.innerHTML = "";
 
   if (resultData) {
+    let delay = 0;
     // 일차별 결과 div생성
     for (const day in resultData) {
-      const $resultItem = card.createCard(day, resultData[day]);
-      $resultContainer.append($resultItem);
+      delay += 1500;
+      setTimeout(async () => {
+        const $resultItem = card.createCard(day, resultData[day]);
+        $resultContainer.append($resultItem);
+      }, delay);
     }
   } else {
     $resultContainer.innerText = "보여드릴 일정이 없습니다.";
