@@ -13,10 +13,21 @@ function render() {
   // 초기화
   $questionContainer.innerHTML = "";
 
+  const $inputSection = document.createElement("section");
+  const $btnSection = document.createElement("section");
+  const $divFirstInput = document.createElement("div");
+  const $divSecondInput = document.createElement("div");
+
+  $inputSection.classList.add("section-input");
+  $btnSection.classList.add("section-button");
+  $divFirstInput.classList.add("div-input-01");
+  $divSecondInput.classList.add("div-input-02");
+
   // 나라 입력
   const $labelContry = document.createElement("label");
   $labelContry.innerText = "나라";
   $labelContry.setAttribute("for", "inputContry");
+  $labelContry.classList.add("label-contry");
 
   const $inputContry = document.createElement("input");
   $inputContry.type = "text";
@@ -26,6 +37,7 @@ function render() {
   const $labelCity = document.createElement("label");
   $labelCity.innerText = "도시";
   $labelCity.setAttribute("for", "inputCity");
+  $labelCity.classList.add("label-city");
 
   const $inputCity = document.createElement("input");
   $inputCity.type = "text";
@@ -35,6 +47,7 @@ function render() {
   const $labelSchedule = document.createElement("label");
   $labelSchedule.innerText = "일정";
   $labelSchedule.setAttribute("for", "inputSchedule");
+  $labelSchedule.classList.add("label-schedule");
 
   const $inputSchedule = document.createElement("input");
   $inputSchedule.type = "text";
@@ -44,6 +57,7 @@ function render() {
   const $labelInclusion = document.createElement("label");
   $labelInclusion.innerText = "포함하고 싶은 장소";
   $labelInclusion.setAttribute("for", "inputInclusion");
+  $labelInclusion.classList.add("label-inclusion");
 
   const $inputInclusion = document.createElement("input");
   $inputInclusion.type = "text";
@@ -52,17 +66,21 @@ function render() {
   // 저장 버튼
   const $saveBtn = saveBtn.render();
 
-  $questionContainer.append(
-    $labelContry,
-    $inputContry,
-    $labelCity,
-    $inputCity,
+  // 나라, 도시 입력
+  $divFirstInput.append($labelContry, $inputContry, $labelCity, $inputCity);
+
+  // 일정, 포함할 장소 입력
+  $divSecondInput.append(
     $labelSchedule,
     $inputSchedule,
     $labelInclusion,
-    $inputInclusion,
-    $saveBtn
+    $inputInclusion
   );
+
+  $inputSection.append($divFirstInput, $divSecondInput);
+  $btnSection.append($saveBtn);
+
+  $questionContainer.append($inputSection, $btnSection);
 
   return $questionContainer;
 }
