@@ -12,8 +12,12 @@ const $main = document.createElement("main");
 const $mainFooter = document.createElement("footer");
 
 $mainHeader.setAttribute("id", "header");
+$mainHeader.innerText = "header";
+
 $main.setAttribute("id", "main");
+
 $mainFooter.setAttribute("id", "footer");
+$mainFooter.innerText = "footer";
 
 $root.append($mainHeader, $main, $mainFooter);
 
