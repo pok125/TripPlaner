@@ -32,6 +32,7 @@ function render() {
   const $inputCountry = document.createElement("input");
   $inputCountry.type = "text";
   $inputCountry.setAttribute("id", "inputCountry");
+  $inputCountry.placeholder = "ex) 한국";
 
   // 도시 입력
   const $labelCity = document.createElement("label");
@@ -42,6 +43,7 @@ function render() {
   const $inputCity = document.createElement("input");
   $inputCity.type = "text";
   $inputCity.setAttribute("id", "inputCity");
+  $inputCity.placeholder = "ex) 서울";
 
   // 일정 입력
   const $labelSchedule = document.createElement("label");
@@ -52,6 +54,7 @@ function render() {
   const $inputSchedule = document.createElement("input");
   $inputSchedule.type = "text";
   $inputSchedule.setAttribute("id", "inputSchedule");
+  $inputSchedule.placeholder = "ex) 2박3일";
 
   // 포함하고 싶은 장소 입력
   const $labelInclusion = document.createElement("label");
@@ -62,6 +65,7 @@ function render() {
   const $inputInclusion = document.createElement("input");
   $inputInclusion.type = "text";
   $inputInclusion.setAttribute("id", "inputInclusion");
+  $inputInclusion.placeholder = "ex) 명동";
 
   // 저장 버튼
   const $saveBtn = saveBtn.render();
