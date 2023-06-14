@@ -33,11 +33,12 @@ function render() {
 
     // 일차별 결과 div생성
     for (const day in resultData) {
-      delay += 1500;
       setTimeout(async () => {
         const $resultItem = card.createCard(day, resultData[day]);
         $resultContainer.append($resultItem);
       }, delay);
+
+      delay += 1500;
     }
   } else {
     $resultContainer.innerText = "보여드릴 일정이 없습니다.";
