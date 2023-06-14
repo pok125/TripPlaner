@@ -1,6 +1,9 @@
 import { questionData, urlDatas } from "../../data/index.js";
 import { fetchAPI } from "../../utils/index.js";
 import { result } from "../Result/index.js";
+import { loading } from "../Loading/index.js";
+
+const $divLoading = loading.render();
 
 /**
  * 저장 버튼 생성
@@ -90,6 +93,10 @@ function pushQuestion(question) {
  */
 async function sendData() {
   try {
+    // 로딩
+    result.$resultContainer.innerHTML = "";
+    result.$resultContainer.append($divLoading);
+
     // 데이터 전송
     const answer = await fetchAPI.apiPost(urlDatas.chatGPT, questionData.data);
     const message = answer.choices[0].message.content;

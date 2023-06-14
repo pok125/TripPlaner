@@ -14,6 +14,7 @@ function createCard(day, contentDatas) {
   $cardContainer.classList.add("div-card");
   $title.setAttribute("id", "cardHeader");
   $content.setAttribute("id", "cardContent");
+
   // 일차
   $title.innerText = day;
 

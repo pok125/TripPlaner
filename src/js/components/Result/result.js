@@ -30,6 +30,7 @@ function render() {
 
   if (resultData) {
     let delay = 0;
+
     // 일차별 결과 div생성
     for (const day in resultData) {
       delay += 1500;
@@ -45,4 +46,4 @@ function render() {
   return $resultContainer;
 }
 
-export { setResultData, render };
+export { setResultData, render, $resultContainer };

@@ -195,6 +195,12 @@
   fill: pink;
 }
 
+.div-loading {
+  width: 200px;
+  height: 200px;
+  background-image: url("../asset/gif/loading.gif");
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
