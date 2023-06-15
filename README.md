@@ -4,6 +4,7 @@
 ## 개발환경
 * Front : HTML, CSS, Vanilla JS
 ## 프로젝트 구조
+``` plan text
 .
 ├── README.md
 ├── index.html
@@ -42,3 +43,4 @@
         └── utils
             ├── fetchAPI.js
             └── index.js
+```
