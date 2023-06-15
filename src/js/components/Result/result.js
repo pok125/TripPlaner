@@ -33,7 +33,7 @@ function render() {
 
     // 일차별 결과 div생성
     for (const day in resultData) {
-      setTimeout(async () => {
+      setTimeout(() => {
         const $resultItem = card.createCard(day, resultData[day]);
         $resultContainer.append($resultItem);
       }, delay);

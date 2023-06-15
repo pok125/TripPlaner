@@ -187,18 +187,18 @@
   font-weight: bold;
 }
 
+.div-loading {
+  width: 200px;
+  height: 200px;
+  background-image: url("../asset/gif/loading.gif");
+}
+
 .world-map > path {
   cursor: pointer;
 }
 
 .world-map > path:hover {
   fill: pink;
-}
-
-.div-loading {
-  width: 200px;
-  height: 200px;
-  background-image: url("../asset/gif/loading.gif");
 }
 
 @keyframes slideInFromLeft {
